@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap" rel="stylesheet">
+    <link href="assets/list.css" rel="stylesheet">
+    <title>{{ .Name }}</title>
+</head>
+
+<body>
+
+    <!-- Visible content -->
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="logo d-flex justify-content-center mt-3 mb-4">
+            <a href="#">Groupie Tracker</a>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ .Image }}">
+                    <div class="card-footer">
+                        <h5 class="card-title mt-3 mb-3"></h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Established</p>
+                                <p>Members</p>
+                                <p>First release</p>
+                            </div>
+                            <div class="col-6 rightflow">
+                                <p>{{ .Establish  }}</p>
+                                <p>{{ .MembersNum }}</p>
+                                <p>{{ .Album }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <ul class="list-group list-group-flush">
+                            {{ range .Members }}
+                            <li class="list-group-item">{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-8 col-xl-9" id="map"></div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=be34f503-990f-4277-a940-92132e04665b"
+        type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/map.js"></script>
+
+</body>
+
+</html>

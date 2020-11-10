@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap" rel="stylesheet">
+    <link href="assets/list.css" rel="stylesheet">
+    <title>Groupie Tracker</title>
+</head>
+
+<body>
+
+    <!-- Visible content -->
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="logo d-flex justify-content-center mt-3 mb-4">
+            <a href="#">Groupie Tracker</a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">
+                    <i class="material-icons">search</i>
+                </span>
+            </div>
+            <input type="text" class="form-control" id="search" placeholder="Search anything...">
+        </div>
+        <div class="mt-2 mb-4 pl-2 pr-2">
+            <small class="text-muted">Found: <span id="found"></span></small>
+            <a href="#" class="float-right" data-toggle="modal" data-target="#modal">
+                <small>Add filter</small>
+            </a>
+        </div>
+
+
+        <!-- Search results -->
+        <div class="row" id="cards"></div>
+
+        <!-- Pagination -->
+        <nav class="d-flex justify-content-center mt-5">
+            <ul class="pagination" id="pag"></ul>
+        </nav>
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add filter</h5>
+                </div>
+                <div class="modal-body">
+                    <label>Members Number Range</label>
+                    <div class="form-row mb-4">
+                        <div class="col-6">
+                            <input type="number" class="form-control" id="mem_start">
+                        </div>
+                        <div class="col-6">
+                            <input type="number" class="form-control" id="mem_end">
+                        </div>
+                    </div>
+                    <label>Establish Year Range</label>
+                    <div class="form-row mb-4">
+                        <div class="col-6">
+                            <input type="number" class="form-control" id="est_start">
+                        </div>
+                        <div class="col-6">
+                            <input type="number" class="form-control" id="est_end">
+                        </div>
+                    </div>
+                    <label>Event Date Range</label>
+                    <div class="form-row mb-4">
+                        <div class="col-6">
+                            <input type="date" class="form-control" id="con_start">
+                        </div>
+                        <div class="col-6">
+                            <input type="date" class="form-control" id="con_end">
+                        </div>
+                    </div>
+                    <label>First Release Date Range</label>
+                    <div class="form-row mb-4">
+                        <div class="col-6">
+                            <input type="date" class="form-control" id="alb_start">
+                        </div>
+                        <div class="col-6">
+                            <input type="date" class="form-control" id="alb_end">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="clearFilters">Clear
+                        filters</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveFilter">Save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/list.js"></script>
+
+</body>
+
+</html>
